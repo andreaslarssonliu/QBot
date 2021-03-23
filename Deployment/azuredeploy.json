@@ -391,7 +391,7 @@
       "apiVersion": "2018-07-12",
       "name": "[variables('botName')]",
       "type": "Microsoft.BotService/botServices",
-      "location": "global",
+      "location": "westeurope",
       "kind": "sdk",
       "sku": {
         "name": "F0"
@@ -409,13 +409,13 @@
           "name": "[concat(variables('botName'), '/MsTeamsChannel')]",
           "type": "Microsoft.BotService/botServices/channels",
           "apiVersion": "2018-07-12",
-          "location": "global",
+          "location": "westeurope",
           "sku": {
             "name": "F0"
           },
           "properties": {
             "channelName": "MsTeamsChannel",
-            "location": "global",
+            "location": "westeurope",
             "properties": {
               "isEnabled": true
             }
