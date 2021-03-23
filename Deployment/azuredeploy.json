@@ -214,7 +214,7 @@
     "questionsAppName": "[concat(parameters('baseResourceName'), '-questions')]",
     "questionsAppInsightsName": "[concat(parameters('baseResourceName'), '-questionsAppInsight')]",
     "qnaMakerAccountName": "[parameters('baseResourceName')]",
-    "qnaMakerLocation": "westeurope",
+    "qnaMakerLocation": "westus",
     "qnaMakerSkuValue": "[substring(parameters('qnaMakerSku'), 0, 2)]",
     "qnaMakerAppServiceName": "[concat(parameters('baseResourceName'), '-qnamaker')]",
     "azureSearchName": "[concat(uniquestring(concat(resourceGroup().id, parameters('baseResourceName'))), '-search')]",
@@ -391,7 +391,7 @@
       "apiVersion": "2018-07-12",
       "name": "[variables('botName')]",
       "type": "Microsoft.BotService/botServices",
-      "location": "westeurope",
+      "location": "global",
       "kind": "sdk",
       "sku": {
         "name": "F0"
@@ -409,13 +409,13 @@
           "name": "[concat(variables('botName'), '/MsTeamsChannel')]",
           "type": "Microsoft.BotService/botServices/channels",
           "apiVersion": "2018-07-12",
-          "location": "westeurope",
+          "location": "global",
           "sku": {
             "name": "F0"
           },
           "properties": {
             "channelName": "MsTeamsChannel",
-            "location": "westeurope",
+            "location": "global",
             "properties": {
               "isEnabled": true
             }
