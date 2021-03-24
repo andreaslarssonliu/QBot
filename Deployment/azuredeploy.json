@@ -214,7 +214,7 @@
     "questionsAppName": "[concat(parameters('baseResourceName'), '-questions')]",
     "questionsAppInsightsName": "[concat(parameters('baseResourceName'), '-questionsAppInsight')]",
     "qnaMakerAccountName": "[parameters('baseResourceName')]",
-    "qnaMakerLocation": "westus",
+    "qnaMakerLocation": "[parameters('location')]",
     "qnaMakerSkuValue": "[substring(parameters('qnaMakerSku'), 0, 2)]",
     "qnaMakerAppServiceName": "[concat(parameters('baseResourceName'), '-qnamaker')]",
     "azureSearchName": "[concat(uniquestring(concat(resourceGroup().id, parameters('baseResourceName'))), '-search')]",
